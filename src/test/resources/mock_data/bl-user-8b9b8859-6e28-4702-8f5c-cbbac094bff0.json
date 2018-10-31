@@ -1,0 +1,91 @@
+{
+  "user" : {
+    "username" : "test",
+    "id" : "8b9b8859-6e28-4702-8f5c-cbbac094bff0",
+    "barcode" : "123456789098765",
+    "active" : true,
+    "type" : "patron",
+    "patronGroup" : "ba023cf1-2c6e-4d93-8803-1a5d1bf5b761",
+    "proxyFor" : [ ],
+    "personal" : {
+      "lastName" : "McTest",
+      "firstName" : "Testy",
+      "middleName" : "Test",
+      "email" : "testy.mctest@example.com",
+      "phone" : "(123)867-5309 x90125",
+      "dateOfBirth" : "1980-01-23T00:00:00.000+0000",
+      "addresses" : [ {
+        "countryId" : "US",
+        "addressLine1" : "123 Fake Street",
+        "city" : "Springfield",
+        "region" : "OH",
+        "postalCode" : "12345",
+        "addressTypeId" : "d1280d63-f932-405b-98a6-f62e350596cb",
+        "primaryAddress" : true
+      } ],
+      "preferredContactTypeId" : "002"
+    },
+    "enrollmentDate" : "2015-04-13T00:00:00.000+0000",
+    "expirationDate" : "2019-10-30T00:00:00.000+0000",
+    "createdDate" : "2018-10-29T02:02:34.257+0000",
+    "updatedDate" : "2018-10-29T02:02:34.257+0000",
+    "metadata" : {
+      "createdDate" : "2018-10-29T02:02:34.252+0000",
+      "createdByUserId" : "8df5f4f9-8b0b-52c4-a02b-bce2c3041781",
+      "updatedDate" : "2018-10-29T02:02:34.252+0000",
+      "updatedByUserId" : "8df5f4f9-8b0b-52c4-a02b-bce2c3041781"
+    }
+  },
+  "patronGroup" : {
+    "group" : "faculty",
+    "desc" : "Faculty Member",
+    "id" : "ba023cf1-2c6e-4d93-8803-1a5d1bf5b761",
+    "metadata" : {
+      "createdDate" : "2018-10-29T02:00:48.208+0000",
+      "createdByUserId" : "8df5f4f9-8b0b-52c4-a02b-bce2c3041781",
+      "updatedDate" : "2018-10-29T02:00:48.208+0000",
+      "updatedByUserId" : "8df5f4f9-8b0b-52c4-a02b-bce2c3041781"
+    }
+  },
+  "permissions" : {
+    "permissions" : [ ]
+  },
+  "proxiesFor" : [ ],
+  "servicePointsUser" : {
+    "id" : "d048d767-ddeb-4090-9d6a-60080e52cf84",
+    "userId" : "8b9b8859-6e28-4702-8f5c-cbbac094bff0",
+    "servicePointsIds" : [ "c4c90014-c8c9-4ade-8f24-b5e313319f4b", "3a40852d-49fd-4df2-a1f9-6e2641a6e91f" ],
+    "servicePoints" : [ {
+      "id" : "c4c90014-c8c9-4ade-8f24-b5e313319f4b",
+      "name" : "Circ Desk 2",
+      "code" : "cd2",
+      "discoveryDisplayName" : "Circulation Desk -- Back Entrance",
+      "locationIds" : [ ],
+      "metadata" : {
+        "createdDate" : "2018-10-29T01:57:46.396+0000",
+        "createdByUserId" : "8df5f4f9-8b0b-52c4-a02b-bce2c3041781",
+        "updatedDate" : "2018-10-29T01:57:46.396+0000",
+        "updatedByUserId" : "8df5f4f9-8b0b-52c4-a02b-bce2c3041781"
+      }
+    }, {
+      "id" : "3a40852d-49fd-4df2-a1f9-6e2641a6e91f",
+      "name" : "Circ Desk 1",
+      "code" : "cd1",
+      "discoveryDisplayName" : "Circulation Desk -- Hallway",
+      "locationIds" : [ ],
+      "metadata" : {
+        "createdDate" : "2018-10-29T01:57:46.926+0000",
+        "createdByUserId" : "8df5f4f9-8b0b-52c4-a02b-bce2c3041781",
+        "updatedDate" : "2018-10-29T01:57:46.926+0000",
+        "updatedByUserId" : "8df5f4f9-8b0b-52c4-a02b-bce2c3041781"
+      }
+    } ],
+    "defaultServicePointId" : "c4c90014-c8c9-4ade-8f24-b5e313319f4b",
+    "metadata" : {
+      "createdDate" : "2018-10-29T02:07:06.187+0000",
+      "createdByUserId" : "8df5f4f9-8b0b-52c4-a02b-bce2c3041781",
+      "updatedDate" : "2018-10-29T02:07:06.187+0000",
+      "updatedByUserId" : "8df5f4f9-8b0b-52c4-a02b-bce2c3041781"
+    }
+  }
+}

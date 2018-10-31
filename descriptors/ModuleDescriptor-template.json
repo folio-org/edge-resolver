@@ -1,0 +1,19 @@
+{
+  "id": "${artifactId}-${version}",
+  "name": "Resolver Edge API",
+  "provides": [],
+  "requires": [
+    {
+      "id": "users-bl",
+      "version": "3.0"
+    }
+  ],
+  "permissionSets": [],
+  "launchDescriptor": {
+    "dockerImage": "${artifactId}:${version}",
+    "dockerArgs": {
+      "HostConfig": { "PortBindings": { "8081/tcp": [{ "HostPort": "%p" }] } }
+    },
+    "dockerPull": false
+  }
+}
