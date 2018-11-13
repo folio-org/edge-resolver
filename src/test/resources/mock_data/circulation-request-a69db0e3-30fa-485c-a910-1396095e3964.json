@@ -1,0 +1,39 @@
+{
+  "id":"a69db0e3-30fa-485c-a910-1396095e3964",
+  "requestType":"Hold",
+  "requestDate":"2018-06-18T09:23:45.000+0000",
+  "requesterId":"eb474cbb-44f6-47d9-afc7-a652b69c443c",
+  "itemId":"59270e6a-148e-401f-9d89-acbbd3378a81",
+  "status":"Open - Not yet filled",
+  "position":1,
+  "item":{
+    "title":"Example Book",
+    "barcode":"1234567890",
+    "holdingsRecordId":"76c8c026-9e5e-4a08-b204-a9c341750074",
+    "instanceId":"9b81582f-37db-4ad4-bec0-12dcd92d60ab",
+    "location":{
+      "name":"Main Library"
+    },
+    "contributorNames":[
+      {
+        "name":"Doe, John"
+      }
+    ],
+    "status":"Checked out",
+    "callNumber":"PR1234.I5678 B987 2018"
+  },
+  "requester":{
+    "firstName":"John",
+    "lastName":"Student",
+    "middleName":"Q",
+    "barcode":"01928375675849"
+  },
+  "fulfilmentPreference":"Hold Shelf",
+  "holdShelfExpirationDate":"2020-01-20",
+  "metadata":{
+    "createdDate":"2018-11-09T02:03:04.927+0000",
+    "createdByUserId":"aa32efc0-2910-5552-ab11-60c3512c8599",
+    "updatedDate":"2018-11-09T02:03:04.927+0000",
+    "updatedByUserId":"aa32efc0-2910-5552-ab11-60c3512c8599"
+  }
+}

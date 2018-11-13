@@ -4,6 +4,8 @@ import static io.vertx.core.http.HttpMethod.GET;
 import static org.folio.edge.core.Constants.SYS_API_KEY_SOURCES;
 import static org.folio.edge.core.Constants.SYS_OKAPI_URL;
 import static org.folio.edge.core.Constants.SYS_REQUEST_TIMEOUT_MS;
+import static org.folio.edge.resolver.Constants.PATH_PARAM_LOAN_ID;
+import static org.folio.edge.resolver.Constants.PATH_PARAM_REQUEST_ID;
 import static org.folio.edge.resolver.Constants.PATH_PARAM_USER_ID;
 
 import org.folio.edge.core.ApiKeyHelper;
@@ -23,15 +25,28 @@ public final class MainVerticle extends EdgeVerticle2 {
     final ResolverOkapiClientFactory ocf = new ResolverOkapiClientFactory(vertx,
         config().getString(SYS_OKAPI_URL),
         config().getLong(SYS_REQUEST_TIMEOUT_MS));
+    final ApiKeyHelper apiKeyHelper =
+        new ApiKeyHelper(config().getString(SYS_API_KEY_SOURCES));
     final ResolveUserHandler resolveUserHandler =
-        new ResolveUserHandler(secureStore, ocf,
-            new ApiKeyHelper(config().getString(SYS_API_KEY_SOURCES)));
+        new ResolveUserHandler(secureStore, ocf, apiKeyHelper);
+    final ResolveCirculationHandler resolveCirculationHandler =
+        new ResolveCirculationHandler(secureStore, ocf, apiKeyHelper);
+
     final Router router = Router.router(vertx);
 
+    // Internal/Administrative
     router.route().handler(BodyHandler.create());
     router.route(GET, "/admin/health").handler(this::handleHealthCheck);
+
+    // Users
     router.route(GET, "/resolve/users/:" + PATH_PARAM_USER_ID)
       .handler(resolveUserHandler::handleResolveUser);
+
+    // Circulation
+    router.route(GET, "/resolve/circulation/loans/:" + PATH_PARAM_LOAN_ID)
+      .handler(resolveCirculationHandler::handleResolveLoan);
+    router.route(GET, "/resolve/circulation/requests/:" + PATH_PARAM_REQUEST_ID)
+      .handler(resolveCirculationHandler::handleResolveRequest);
 
     return router;
   }
