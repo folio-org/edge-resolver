@@ -1,0 +1,40 @@
+{
+  "id":"b7a40894-218e-4151-8383-01efc98ae248",
+  "userId":"8b9b8859-6e28-4702-8f5c-cbbac094bff0",
+  "itemId":"59270e6a-148e-401f-9d89-acbbd3378a81",
+  "status":{
+    "name":"Open"
+  },
+  "loanDate":"2018-05-05T18:32:31Z",
+  "dueDate":"2020-03-19T18:32:31.000+0000",
+  "action":"checkedout",
+  "renewalCount":0,
+  "loanPolicyId":"d9cd0bed-1b49-4b5e-a7bd-064b8d177231",
+  "metadata":{
+    "createdDate":"2018-11-09T02:02:56.375+0000",
+    "createdByUserId":"aa32efc0-2910-5552-ab11-60c3512c8599",
+    "updatedDate":"2018-11-09T02:02:56.375+0000",
+    "updatedByUserId":"aa32efc0-2910-5552-ab11-60c3512c8599"
+  },
+  "item":{
+    "holdingsRecordId":"76c8c026-9e5e-4a08-b204-a9c341750074",
+    "instanceId":"9b81582f-37db-4ad4-bec0-12dcd92d60ab",
+    "title":"Example Book",
+    "barcode":"1234567890",
+    "contributors":[
+      {
+        "name":"Doe, John"
+      }
+    ],
+    "callNumber":"PR1234.I5678 B987 2018",
+    "status":{
+      "name":"Checked out"
+    },
+    "location":{
+      "name":"Main Library"
+    },
+    "materialType":{
+      "name":"book"
+    }
+  }
+}

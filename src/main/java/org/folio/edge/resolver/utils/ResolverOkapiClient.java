@@ -24,4 +24,20 @@ public final class ResolverOkapiClient extends OkapiClient {
         combineHeadersWithDefaults(headers), responseHandler,
         exceptionHandler);
   }
+
+  public void resolveLoanId(String loanId, MultiMap headers,
+      Handler<HttpClientResponse> responseHandler,
+      Handler<Throwable> exceptionHandler) {
+    get(okapiURL + "/circulation/loans/" + loanId, tenant,
+        combineHeadersWithDefaults(headers), responseHandler,
+        exceptionHandler);
+  }
+
+  public void resolveRequestId(String requestId, MultiMap headers,
+      Handler<HttpClientResponse> responseHandler,
+      Handler<Throwable> exceptionHandler) {
+    get(okapiURL + "/circulation/requests/" + requestId, tenant,
+        combineHeadersWithDefaults(headers), responseHandler,
+        exceptionHandler);
+  }
 }

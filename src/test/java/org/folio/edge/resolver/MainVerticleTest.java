@@ -124,4 +124,80 @@ public class MainVerticleTest {
     context.assertEquals("Invalid user ID format, must be UUID: 12345",
         resp.body().asString());
   }
+
+  @Test
+  public final void testResolveLoanId(final TestContext context) {
+    logger.info("=== Test the resolve loan ID endpoint ===");
+
+    final Response resp = RestAssured
+        .given()
+        .when()
+          .get("/resolve/circulation/loans/b7a40894-218e-4151-8383-01efc98ae248?apiKey=" + apiKey)
+        .then()
+          .contentType(ContentType.JSON)
+          .statusCode(200)
+          .extract()
+            .response();
+
+    final JsonObject jo = new JsonObject(resp.body().asString());
+    final JsonObject item = jo.getJsonObject("item");
+
+    context.assertEquals("Example Book", item.getString("title"));
+  }
+
+  @Test
+  public final void testResolveLoanIdBadUUID(final TestContext context) {
+    logger.info("=== Test the resolve loan ID endpoint with an invalid UUID ===");
+
+    final Response resp = RestAssured
+        .given()
+        .when()
+          .get("/resolve/circulation/loans/12345?apiKey=" + apiKey)
+        .then()
+          .contentType(ContentType.TEXT)
+          .statusCode(400)
+          .extract()
+            .response();
+
+    context.assertEquals("Invalid loanId format, must be UUID: 12345",
+        resp.body().asString());
+  }
+
+  @Test
+  public final void testResolveRequestId(final TestContext context) {
+    logger.info("=== Test the resolve request ID endpoint ===");
+
+    final Response resp = RestAssured
+        .given()
+        .when()
+          .get("/resolve/circulation/requests/a69db0e3-30fa-485c-a910-1396095e3964?apiKey=" + apiKey)
+        .then()
+          .contentType(ContentType.JSON)
+          .statusCode(200)
+          .extract()
+            .response();
+
+    final JsonObject jo = new JsonObject(resp.body().asString());
+    final JsonObject item = jo.getJsonObject("item");
+
+    context.assertEquals("Example Book", item.getString("title"));
+  }
+
+  @Test
+  public final void testResolveRequestIdBadUUID(final TestContext context) {
+    logger.info("=== Test the resolve request ID endpoint with an invalid UUID ===");
+
+    final Response resp = RestAssured
+        .given()
+        .when()
+          .get("/resolve/circulation/requests/12345?apiKey=" + apiKey)
+        .then()
+          .contentType(ContentType.TEXT)
+          .statusCode(400)
+          .extract()
+            .response();
+
+    context.assertEquals("Invalid requestId format, must be UUID: 12345",
+        resp.body().asString());
+  }
 }
