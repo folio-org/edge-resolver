@@ -1,0 +1,19 @@
+{
+  "id" : "6e5283bf-0ca5-43c6-bdcd-6c925b197694",
+  "formerIds" : [ ],
+  "instanceId" : "54b52ddb-4477-496c-9a3e-cb282d16a89a",
+  "permanentLocationId" : "fcd64ce1-6995-48f0-840e-89ffa2288371",
+  "electronicAccess" : [ ],
+  "callNumber" : "PR6056.I4588 B749 2016",
+  "notes" : [ ],
+  "holdingsStatements" : [ ],
+  "holdingsStatementsForIndexes" : [ ],
+  "holdingsStatementsForSupplements" : [ ],
+  "holdingsItems" : [ ],
+  "metadata" : {
+    "createdDate" : "2018-11-21T01:59:33.945+0000",
+    "createdByUserId" : "add82e69-58f5-5547-85d9-8cc20caf5156",
+    "updatedDate" : "2018-11-21T01:59:33.945+0000",
+    "updatedByUserId" : "add82e69-58f5-5547-85d9-8cc20caf5156"
+  }
+}

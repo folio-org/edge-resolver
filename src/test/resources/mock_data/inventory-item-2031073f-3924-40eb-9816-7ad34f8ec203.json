@@ -1,0 +1,38 @@
+{
+  "id" : "2031073f-3924-40eb-9816-7ad34f8ec203",
+  "status" : {
+    "name" : "Available"
+  },
+  "title" : "Bridget Jones's Baby: the diaries",
+  "callNumber" : "PR6056.I4588 B749 2016",
+  "holdingsRecordId" : "6e5283bf-0ca5-43c6-bdcd-6c925b197694",
+  "barcode" : "4539876054382",
+  "pieceIdentifiers" : [ "Copy 2" ],
+  "notes" : [ "Missing pages; p 10-13" ],
+  "numberOfPieces" : "1",
+  "materialType" : {
+    "id" : "1a54b431-2e4f-452d-9cae-9cee66c9a892",
+    "name" : "book"
+  },
+  "permanentLoanType" : {
+    "id" : "2b94c631-fca9-4892-a730-03ee529ffe27",
+    "name" : "Can circulate"
+  },
+  "temporaryLoanType" : {
+    "id" : "e8b311a6-3b21-43f2-a269-dd9310cb2d0e",
+    "name" : "Course reserves"
+  },
+  "metadata" : {
+    "createdDate" : "2018-11-21T01:59:39.146+0000",
+    "createdByUserId" : "add82e69-58f5-5547-85d9-8cc20caf5156",
+    "updatedDate" : "2018-11-21T01:59:39.146+0000",
+    "updatedByUserId" : "add82e69-58f5-5547-85d9-8cc20caf5156"
+  },
+  "links" : {
+    "self" : "http://folio-testing-backend01.aws.indexdata.com:9130/inventory/items/4428a37c-8bae-4f0d-865d-970d83d5ad55"
+  },
+  "effectiveLocation" : {
+    "id" : "fcd64ce1-6995-48f0-840e-89ffa2288371",
+    "name" : "Main Library"
+  }
+}
