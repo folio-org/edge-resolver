@@ -80,7 +80,7 @@
     <dependency>
       <groupId>com.amazonaws</groupId>
       <artifactId>aws-java-sdk-ssm</artifactId>
-      <version>1.11.454</version>
+      <version>1.11.313</version>
       <exclusions>
         <exclusion>
           <groupId>commons-logging</groupId>
