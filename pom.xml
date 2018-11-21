@@ -73,14 +73,14 @@
     <dependency>
       <groupId>org.folio</groupId>
       <artifactId>edge-common</artifactId>
-      <version>0.3.7-SNAPSHOT</version>
+      <version>0.3.8-SNAPSHOT</version>
     </dependency>
 
     <!-- Only needed for AwsParamStore -->
     <dependency>
       <groupId>com.amazonaws</groupId>
       <artifactId>aws-java-sdk-ssm</artifactId>
-      <version>1.11.313</version>
+      <version>1.11.454</version>
       <exclusions>
         <exclusion>
           <groupId>commons-logging</groupId>

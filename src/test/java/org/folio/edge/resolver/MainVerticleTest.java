@@ -121,7 +121,7 @@ public class MainVerticleTest {
           .extract()
             .response();
 
-    context.assertEquals("Invalid user ID format, must be UUID: 12345",
+    context.assertEquals("Invalid userId format, must be UUID: 12345",
         resp.body().asString());
   }
 
@@ -198,6 +198,117 @@ public class MainVerticleTest {
             .response();
 
     context.assertEquals("Invalid requestId format, must be UUID: 12345",
+        resp.body().asString());
+  }
+
+  @Test
+  public final void testResolveInstanceId(final TestContext context) {
+    logger.info("=== Test the resolve instance ID endpoint ===");
+
+    final Response resp = RestAssured
+        .given()
+        .when()
+          .get("/resolve/inventory/instances/54b52ddb-4477-496c-9a3e-cb282d16a89a?apiKey=" + apiKey)
+        .then()
+          .contentType(ContentType.JSON)
+          .statusCode(200)
+          .extract()
+            .response();
+
+    final JsonObject instance = new JsonObject(resp.body().asString());
+
+    context.assertEquals("Bridget Jones's Baby: the diaries", instance.getString("title"));
+  }
+
+  @Test
+  public final void testResolveInstanceIdBadUUID(final TestContext context) {
+    logger.info("=== Test the resolve instance ID endpoint with an invalid UUID ===");
+
+    final Response resp = RestAssured
+        .given()
+        .when()
+          .get("/resolve/inventory/instances/12345?apiKey=" + apiKey)
+        .then()
+          .contentType(ContentType.TEXT)
+          .statusCode(400)
+          .extract()
+            .response();
+
+    context.assertEquals("Invalid instanceId format, must be UUID: 12345",
+        resp.body().asString());
+  }
+
+  @Test
+  public final void testResolveHoldingId(final TestContext context) {
+    logger.info("=== Test the resolve holding ID endpoint ===");
+
+    final Response resp = RestAssured
+        .given()
+        .when()
+          .get("/resolve/inventory/holdings/6e5283bf-0ca5-43c6-bdcd-6c925b197694?apiKey=" + apiKey)
+        .then()
+          .contentType(ContentType.JSON)
+          .statusCode(200)
+          .extract()
+            .response();
+
+    final JsonObject holding = new JsonObject(resp.body().asString());
+
+    context.assertEquals("PR6056.I4588 B749 2016", holding.getString("callNumber"));
+  }
+
+  @Test
+  public final void testResolveHoldingIdBadUUID(final TestContext context) {
+    logger.info("=== Test the resolve holding ID endpoint with an invalid UUID ===");
+
+    final Response resp = RestAssured
+        .given()
+        .when()
+          .get("/resolve/inventory/holdings/12345?apiKey=" + apiKey)
+        .then()
+          .contentType(ContentType.TEXT)
+          .statusCode(400)
+          .extract()
+            .response();
+
+    context.assertEquals("Invalid holdingId format, must be UUID: 12345",
+        resp.body().asString());
+  }
+
+  @Test
+  public final void testResolveItemId(final TestContext context) {
+    logger.info("=== Test the resolve item ID endpoint ===");
+
+    final Response resp = RestAssured
+        .given()
+        .when()
+          .get("/resolve/inventory/items/2031073f-3924-40eb-9816-7ad34f8ec203?apiKey=" + apiKey)
+        .then()
+          .contentType(ContentType.JSON)
+          .statusCode(200)
+          .extract()
+            .response();
+
+    final JsonObject item = new JsonObject(resp.body().asString());
+
+    context.assertEquals("Bridget Jones's Baby: the diaries", item.getString("title"));
+  }
+
+  @Test
+  public final void testResolveItemIdBadUUID(final TestContext context) {
+    logger.info("=== Test the resolve item ID endpoint with an invalid UUID ===");
+
+    final Response resp = RestAssured
+        .given()
+        .when()
+          .get("/resolve/inventory/items/12345?apiKey=" + apiKey)
+        .then()
+          .contentType(ContentType.TEXT)
+          .statusCode(400)
+          .extract()
+            .response();
+
+    context.assertEquals("Invalid itemId format, must be UUID: 12345",
         resp.body().asString());
   }
 }

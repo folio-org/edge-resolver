@@ -1,0 +1,60 @@
+{
+  "@context" : "http://folio-testing-backend01.aws.indexdata.com:9130/inventory/instances/context",
+  "id" : "54b52ddb-4477-496c-9a3e-cb282d16a89a",
+  "hrid" : "in000005",
+  "source" : "MARC",
+  "title" : "Bridget Jones's Baby: the diaries",
+  "parentInstances" : [ ],
+  "childInstances" : [ ],
+  "alternativeTitles" : [ ],
+  "editions" : [ "First American Edition" ],
+  "series" : [ ],
+  "identifiers" : [ {
+    "identifierTypeId" : "5d164f4b-0b15-4e42-ae75-cfcf85318ad9",
+    "value" : "ocn956625961"
+  } ],
+  "contributors" : [ {
+    "contributorNameTypeId" : "2b94c631-fca9-4892-a730-03ee529ffe2a",
+    "name" : "Fielding, Helen",
+    "contributorTypeId" : null,
+    "contributorTypeText" : null
+  } ],
+  "subjects" : [ "Jones, Bridget", "Pregnant women", "England", "Humorous fiction", "Diary fiction" ],
+  "classifications" : [ {
+    "classificationNumber" : "PR6056.I4588",
+    "classificationTypeId" : "ce176ace-a53e-4b4d-aa89-725ed7b2edac"
+  } ],
+  "publication" : [ {
+    "publisher" : "Alfred A. Knopf",
+    "place" : "New York",
+    "dateOfPublication" : "2016",
+    "role" : null
+  } ],
+  "publicationFrequency" : [ "A frequency description" ],
+  "publicationRange" : [ "A publication range" ],
+  "electronicAccess" : [ {
+    "uri" : "http://www.folio.org/",
+    "linkText" : "Electronic resource (audio streaming)",
+    "materialsSpecification" : "Novel",
+    "publicNote" : "Access to audio file",
+    "relationshipId" : null
+  } ],
+  "instanceTypeId" : "6312d172-f0cf-40f6-b27d-9fa8feaf332f",
+  "instanceFormatIds" : [ ],
+  "physicalDescriptions" : [ "219 pages ; 20 cm." ],
+  "languages" : [ "eng" ],
+  "notes" : [ "Bridget Jones finds herself unexpectedly pregnant at the eleventh hour. However, her joyful pregnancy is dominated by one crucial but awkward question --who is the father? Could it be honorable, decent, notable human rights lawyer, Mark Darcy? Or, is it charming, witty, and totally despicable, Daniel Cleaver?" ],
+  "previouslyHeld" : true,
+  "staffSuppress" : true,
+  "discoverySuppress" : true,
+  "statisticalCodes" : [ ],
+  "metadata" : {
+    "createdDate" : "2018-11-21T01:59:20.809+0000",
+    "createdByUserId" : "add82e69-58f5-5547-85d9-8cc20caf5156",
+    "updatedDate" : "2018-11-21T01:59:20.809+0000",
+    "updatedByUserId" : "add82e69-58f5-5547-85d9-8cc20caf5156"
+  },
+  "links" : {
+    "self" : "http://folio-testing-backend01.aws.indexdata.com:9130/inventory/instances/7fbd5d84-62d1-44c6-9c45-6cb173998bbd"
+  }
+}

@@ -40,4 +40,28 @@ public final class ResolverOkapiClient extends OkapiClient {
         combineHeadersWithDefaults(headers), responseHandler,
         exceptionHandler);
   }
+
+  public void resolveInstanceId(String instanceId, MultiMap headers,
+      Handler<HttpClientResponse> responseHandler,
+      Handler<Throwable> exceptionHandler) {
+    get(okapiURL + "/inventory/instances/" + instanceId, tenant,
+        combineHeadersWithDefaults(headers), responseHandler,
+        exceptionHandler);
+  }
+
+  public void resolveHoldingId(String holdingId, MultiMap headers,
+      Handler<HttpClientResponse> responseHandler,
+      Handler<Throwable> exceptionHandler) {
+    get(okapiURL + "/holdings-storage/holdings/" + holdingId, tenant,
+        combineHeadersWithDefaults(headers), responseHandler,
+        exceptionHandler);
+  }
+
+  public void resolveItemId(String itemId, MultiMap headers,
+      Handler<HttpClientResponse> responseHandler,
+      Handler<Throwable> exceptionHandler) {
+    get(okapiURL + "/inventory/items/" + itemId, tenant,
+        combineHeadersWithDefaults(headers), responseHandler,
+        exceptionHandler);
+  }
 }
