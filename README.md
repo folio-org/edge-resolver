@@ -1,9 +1,13 @@
 # edge-resolver
 
-Copyright (C) 2018-2019 The Open Library Foundation
+Copyright (C) 2018-2022 The Open Library Foundation
 
 This software is distributed under the terms of the Apache License,
 Version 2.0. See the file "[LICENSE](LICENSE)" for more information.
+
+## DEPRECATED
+
+The use case for this edge module no longer exists. Therefore it is no longer maintained.
 
 ## Overview
 
